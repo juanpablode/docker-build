@@ -6,6 +6,7 @@ env:
   IMAGE_NAME: fixedbuffer/hello
 
 
+
 jobs:
   build-and-push-images:
     runs-on: [self-hosted, linux, x64]
