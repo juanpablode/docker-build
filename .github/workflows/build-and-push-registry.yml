@@ -41,7 +41,7 @@ jobs:
         if: github.ref == 'refs/heads/master' # Solo master
         uses: docker/login-action@v1
         with:
-          registry: vwarpauvdopoc.ar.sa.vwg
+          registry: vwarpauvdopoc.ar.sa.vwg:5000
           username: ${{ secrets.LOCAL_USERNAME }}
           password: ${{ secrets.LOCAL_PASSWORD }}
 
