@@ -6,7 +6,6 @@ env:
   IMAGE_NAME: fixedbuffer/hello
 
 
-
 jobs:
   build-and-push-images:
     runs-on: [self-hosted, linux, x64]
@@ -44,6 +43,7 @@ jobs:
           registry: vwarpauvdopoc.ar.sa.vwg:5000
           username: ${{ secrets.LOCAL_USERNAME }}
           password: ${{ secrets.LOCAL_PASSWORD }}
+
 
       - name: Build and push Docker image
         uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
