@@ -3,7 +3,7 @@ name: Github Registry
 on: [push, pull_request, workflow_dispatch]
 
 env:
-  IMAGE_NAME: fixedbuffer/hello
+  IMAGE_NAME: arquitectura/hello
 
 
 jobs:
@@ -23,8 +23,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            ${{ env.IMAGE_NAME}}
-            ghcr.io/${{ env.IMAGE_NAME}}
+            vwarpauvdopoc.ar.sa.vwg:5000/${{ env.IMAGE_NAME}}
           tags: |
             latest
             type=sha
@@ -46,9 +45,10 @@ jobs:
 
 
       - name: Build and push Docker image
-        uses: docker/build-push-action@ad44023a93711e3deb337508980b4b5e9bcdc5dc
+        uses: docker/build-push-action@v2
         with:
           context: .
-          push: github.ref == 'refs/heads/master' # Solo master
+          push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+
