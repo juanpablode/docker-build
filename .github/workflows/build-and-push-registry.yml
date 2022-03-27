@@ -56,6 +56,7 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
 
 
+
       - name: kubectl deploy 
         run: | 
           kubectl apply -f create-pod.yaml
