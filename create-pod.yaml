@@ -8,9 +8,11 @@ spec:
     - name: hello
       image: arquitectura/hello
       imagePullPolicy: Always
-      command: [ "top" ]
+      command: [ "tail -f /dev/null" ]
 
 
 
   imagePullSecrets:
-    - name: regcred
+    - name: regdcsrv2
+
+    
