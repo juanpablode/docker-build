@@ -43,7 +43,7 @@ jobs:
           username: ${{ secrets.LOCAL_USERNAME }}
           password: ${{ secrets.LOCAL_PASSWORD }}
 
-      - name: kubectl deploy 
+      - name: dig 
         run: | 
           dig dcsrv2.contadepto.net
 
