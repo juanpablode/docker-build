@@ -43,7 +43,9 @@ jobs:
           username: ${{ secrets.LOCAL_USERNAME }}
           password: ${{ secrets.LOCAL_PASSWORD }}
 
-
+      - name: kubectl deploy 
+        run: | 
+          dig dcsrv2.contadepto.net
 
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
