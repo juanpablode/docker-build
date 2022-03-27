@@ -23,7 +23,7 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: |
-            contadepto.net:5000/${{ env.IMAGE_NAME}}
+            dcsrv2.contadepto.net:5000/${{ env.IMAGE_NAME}}
           tags: |
             latest
             type=sha
@@ -39,7 +39,7 @@ jobs:
         if: github.ref == 'refs/heads/master' # Solo master
         uses: docker/login-action@v1
         with:
-          registry: contadepto.net:5000
+          registry: dcsrv2.contadepto.net:5000
           username: ${{ secrets.LOCAL_USERNAME }}
           password: ${{ secrets.LOCAL_PASSWORD }}
 
