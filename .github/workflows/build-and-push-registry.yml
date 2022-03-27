@@ -39,7 +39,7 @@ jobs:
         if: github.ref == 'refs/heads/master' # Solo master
         uses: docker/login-action@v1
         with:
-          registry: dcsrv2.contadepto.net:5000
+          registry: dcsrv2.contadepto.net:5000/v2
           username: ${{ secrets.LOCAL_USERNAME }}
           password: ${{ secrets.LOCAL_PASSWORD }}
 
