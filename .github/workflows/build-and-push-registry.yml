@@ -49,10 +49,14 @@ jobs:
         run: | 
           dig dcsrv2.contadepto.net
 
-      - name: Build and push Docker image
+      - name: Build 
       
         run: |
           docker build . -t ${{ steps.meta.outputs.tags }}
+          
+      - name: push 
+      
+        run: |         
           docker push ${{ steps.meta.outputs.tags }}
 
 
