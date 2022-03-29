@@ -52,6 +52,7 @@ jobs:
       - name: Build 
       
         run: docker build . -t ${{ steps.meta.outputs.tags }}
+        shell: bash
           
       - name: push 
       
