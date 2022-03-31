@@ -43,8 +43,6 @@ jobs:
           username: ${{ secrets.LOCAL_USERNAME }}
           password: ${{ secrets.LOCAL_PASSWORD }}
 
-
-
       - name: dig 
         run: | 
           dig dcsrv2.contadepto.net
@@ -53,6 +51,7 @@ jobs:
       
         run: docker build . -t ${{ steps.meta.outputs.tags }}
         shell: bash
+          
           
       - name: push 
       
