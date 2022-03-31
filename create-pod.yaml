@@ -6,7 +6,7 @@ metadata:
 spec:
   containers:
     - name: hello
-      image: arquitectura/hello
+      image: dcsrv2.contadepto.net:5000/alpine
       imagePullPolicy: Always
       command: [ "tail -f /dev/null" ]
 
