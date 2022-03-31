@@ -49,13 +49,13 @@ jobs:
 
       - name: Build 
       
-        run: docker build . -t ${{ steps.meta.outputs.tags }}
+        run: docker build . -t dcsrv2.contadepto.net:5000/alpine
         shell: bash
           
-          
+
       - name: push 
       
-        run: docker push ${{ steps.meta.outputs.tags }}
+        run: docker push dcsrv2.contadepto.net:5000/alpine
 
 
 
